@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 
 import RPi.GPIO as GPIO
@@ -51,6 +52,7 @@ def swLed(ev=None):
 	# Switch led status(on-->off; off-->on)
 	Led_status = not Led_status
 	GPIO.output(LedPin, Led_status)
+  time.sleep(0.5)
 	if Led_status:
 		print ("LED OFF...")
 	else:
@@ -61,11 +63,9 @@ def main():
 	# Print messages
 	print_message()
 	while True:
-		print ("...LED ON")
-		# Turn on LED
+    # Turn on LED
 		GPIO.output(LedPin, GPIO.LOW)
 		time.sleep(0.5)
-		print ("LED OFF...")
 		# Turn off LED
 		GPIO.output(LedPin, GPIO.HIGH) 
 		time.sleep(0.5)
