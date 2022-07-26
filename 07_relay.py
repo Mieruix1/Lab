@@ -47,11 +47,11 @@ def main():
 		print ("...Relay close")
 		# Tick
 		GPIO.output(relayPin, GPIO.LOW)
-		time.sleep(1)
+		time.sleep(3)
 		print ("Relay open...")
 		# Tock
 		GPIO.output(relayPin, GPIO.HIGH) 
-		time.sleep(1)
+		time.sleep(3)
 
 # Define a destroy function for clean up everything after
 # the script finished 
