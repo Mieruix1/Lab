@@ -52,7 +52,7 @@ def swLed(ev=None):
 	# Switch led status(on-->off; off-->on)
 	Led_status = not Led_status
 	GPIO.output(LedPin, Led_status)
-  time.sleep(0.5)
+	time.sleep(0.5)
 	if Led_status:
 		print ("LED OFF...")
 	else:
